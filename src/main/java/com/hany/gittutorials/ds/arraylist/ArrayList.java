@@ -3,8 +3,8 @@ package com.hany.gittutorials.ds.arraylist;
 public class ArrayList {
 
 	private static final int DEFAULTSIZE = 10;
-	
-	private int[] array = null;
+	private int[] array=null;
+	private int head=0;	
 
 	public ArrayList() {
 		array = new int[DEFAULTSIZE];
@@ -25,5 +25,12 @@ public class ArrayList {
         }
         return array[index];
     }
-
+   
+    public void addElement(int element) {
+    	if(element > 0) {
+    	array[head++] = element;
+    	}else {
+    		throw new RuntimeException("Invalid element to add");
+    	}
+    }
 }
