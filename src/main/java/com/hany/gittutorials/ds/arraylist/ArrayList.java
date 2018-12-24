@@ -36,7 +36,6 @@ public class ArrayList {
     	}
     }
 
-
     public void printElement(int index){
         if(index <0 || index >= array.length){
             throw new RuntimeException("Array index out of bound");
@@ -44,5 +43,7 @@ public class ArrayList {
         System.out.println(array[index]);
     }
 
-
+    public int getSize() {
+    	return head+1;
+    }
 }
