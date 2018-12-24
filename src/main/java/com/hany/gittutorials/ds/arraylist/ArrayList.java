@@ -3,15 +3,20 @@ package com.hany.gittutorials.ds.arraylist;
 public class ArrayList {
 
 	private static final int DEFAULTSIZE = 10;
-	private int[] array=null;
 	
-    public ArrayList(){
-        array = new int[DEFAULTSIZE];
-    }
-    
-    public ArrayList(int size) {
-    	array = new int[size];
-    }
+	private int[] array = null;
+
+	public ArrayList() {
+		array = new int[DEFAULTSIZE];
+	}
+
+	public ArrayList(int size) {
+		if (size > 0) {
+			array = new int[size];
+		}else {
+			throw new RuntimeException("Invalid size");
+		}
+	}
 
     public int getElement(int index){
         // this is to get an element at given index.
@@ -20,4 +25,5 @@ public class ArrayList {
         }
         return array[index];
     }
+
 }
