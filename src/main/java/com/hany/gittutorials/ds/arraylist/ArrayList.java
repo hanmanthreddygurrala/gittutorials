@@ -27,6 +27,7 @@ public class ArrayList {
     }
 
    
+    /*to add the element to the array*/
     public void addElement(int element) {
     	if(element > 0) {
     	array[head++] = element;
