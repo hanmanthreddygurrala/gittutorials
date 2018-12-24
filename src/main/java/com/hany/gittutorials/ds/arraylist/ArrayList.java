@@ -25,6 +25,7 @@ public class ArrayList {
         }
         return array[index];
     }
+
    
     public void addElement(int element) {
     	if(element > 0) {
@@ -33,4 +34,14 @@ public class ArrayList {
     		throw new RuntimeException("Invalid element to add");
     	}
     }
+
+
+    public void printElement(int index){
+        if(index <0 || index >= array.length){
+            throw new RuntimeException("Array index out of bound");
+        }
+        System.out.println(array[index]);
+    }
+
+
 }
